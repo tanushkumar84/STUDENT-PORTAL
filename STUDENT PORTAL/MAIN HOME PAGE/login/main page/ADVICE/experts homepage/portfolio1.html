@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #34353b;
+}
+
+header {
+  height: 100vh;
+  padding: 36px 100px;
+ background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.landing {
+  display: flex;
+  height: 90vh;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.landing .intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing .intro h3 {
+  color: #fbfbfb;
+  font-weight: 400;
+  font-size: 32px;
+  margin-left: 10vw;
+}
+
+.landing .intro h3 span {
+  color: #fec86a;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
+.intro button {
+  height: 48px;
+  width: 144px;
+  margin-top: 2.5vh;
+  margin-left: 10vw;
+  background-color: transparent;
+  border: 2px solid #fec86a;
+  border-radius: 8px;
+  color: #fec86a;
+  font-size: 16px;
+  transition: all ease 0.5s;
+}
+
+.intro button:hover {
+  background-color: #fec86a;
+  color: #34353b;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 50vh;
+}
+
+.socials .line {
+  background-color: #fec86a;
+  height: 15vh;
+  width: 2.5px;
+}
+
+.socials i {
+  color: #fbfbfb;
+  font-size: 36px;
+}
+
+.about {
+  height: 45vh;
+  width: 90vw;
+  padding: 80px;
+}
+
+.about h1 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #fbfbfb;
+  padding-left: 20px;
+  font-family: "Libre Baskerville", serif;
+}
+
+.about .description {
+  display: flex;
+  align-items: start;
+}
+
+.about .description .line {
+  height: 2.5px;
+  width: 800px;
+  background-color: #fec86a;
+  margin-right: 32px;
+}
+
+.about .description p {
+  color: #fbfbfb;
+  font-size: 20px;
+}
+
+.about .description p span {
+  color: #fec86a;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+}
+
+.portfolio h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fbfbfb;
+  font-family: "Libre Baskerville", serif;
+}
+
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 50px;
+  gap: 2.5vh;
+}
+
+.portfolio-card {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  background-color: #3d3e42;
+  border-radius: 20px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  transition: all ease 0.5s;
+}
+.experience {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  width: 100vw;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.darker-div {
+  background-color: #34353a;
+  width: 100vw;
+  height: 10vh;
+}
+
+.experience h1 {
+  position: absolute;
+  color: #fbfbfb;
+  font-size: 45px;
+  padding-left: 20px;
+  font-family: "Libre Baskerville", serif;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 15%;
+}
+
+.lighter-div {
+  background-color: #3d3e42;
+  width: 100vw;
+  /* height: 90vh; */
+  padding: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.lighter-div .exp {
+  height: 30vh;
+  width: 50vw;
+  position: relative;
+  margin-left: 20vh;
+}
+
+.exp h2 {
+  color: #fbfbfb;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.exp h2::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  color: #fec86a;
+  background-color: #fec86a;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 7.5%;
+  left: -5%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 5px #fec86a;
+}
+
+.exp-desc::before {
+  content: "";
+  height: 190px;
+  width: 2.5px;
+  background-color: #fbfbfb;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 55%;
+  left: -5%;
+}
+.exp-desc h3 {
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.exp-desc p {
+  color: #fbfbfb;
+  font-size: 16;
+  font-weight: 400;
+}
+
+.contact-me {
+  width: 100vw;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-me h1 {
+  font-size: 56px;
+  color: #fbfbfb;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+}
+
+.contact {
+  display: flex;
+  gap: 24px;
+}
+
+.contact-card {
+  background-color: #fec86a;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  margin-top: 7.5vh;
+}
+</style>
+<body>
+    <header>
+
+        <div class="landing">
+            <div class="intro">
+                <h3><Span>GEORGE RATHORE</Span><br>Expert in<br>Career Counselling</h3>
+                
+                    <button>Contact Me</button>
+                
+              
+            </div>
+            
+                <div>
+                    <img src = "expert1remove.png">
+                </div>
+                <div class="socials">
+                <div class="line"></div>
+                <i class="ri-facebook-circle-fill"></i>
+                <i class="ri-twitter-fill"></i>
+                <i class="ri-linkedin-fill"></i>
+                <i class="ri-whatsapp-line"></i>
+            </div>
+        </div>
+    </header>
+    <section class="about">
+        <h1>About Me</h1>
+        <div class="description">
+            <div class="line"></div>
+            <p>
+              Certified Career Analyst, Certified Career Counsellor for Abroad Studies, an experienced Career Counsellor, Study Skills Expert, Clarity & Lifestyle Coach; St. Stephen's College alumnus, 30+ yrs professional experience
+              Talks about career,careercounselor, careercounseling.<br>             <br>
+              Explore Careers Counselling Centre
+              <br>
+              St. Stephen's College
+              Gurgaon,India 
+            </p>
+        </div>
+
+
+    <section class="experience">
+        <div class="darker-div"></div>
+        <br><br>
+        <h1>Experience</h1>
+        <div class="lighter-div">
+            <div class="exp">
+                <h2>Decision Making</h2>
+                <br><br>
+                <div class="exp-desc">
+                    
+                    <p> Career counselors help clients make informed decisions about educational programs,
+                         job offers, and career changes. They consider factors such as salary, work-life balance,
+                         and personal values in the decision-making process. Career counselors provide advice 
+                         on job search strategies, including networking, online job searches, and using job
+                         search platforms. They may also offer guidance on cover letter writing and the application process.</p>
+                </div>
+            </div>
+            <div class="exp">
+                <h2>Career transition</h2>
+                <div class="exp-desc">
+                    <br><br>
+                    <p>Depending on the client's goals, career counselors may suggest skill development opportunities 
+                        such as additional education or training to enhance their qualifications. Career counselors
+                         can assist individuals who are looking to make a career change or transition to a different 
+                         industry. They help clients navigate the challenges of switching careers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-me" id="contact-loc">
+        <h1>Contact Me</h1>
+        <div class="contact" >
+            <div class="contact-card">
+                <i class="ri-message-3-line"></i>
+                <p>work.devalphaspace.com</p>
+            </div>
+            <div class="contact-card">
+                <i class="ri-phone-line"></i>
+                <p>0123456789</p>
+            </div>
+            <div class="contact-card">
+                <i class="ri-map-pin-3-line"></i>
+                <p>Tripura, India</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+<script>
+    $('.portfolio-button').mousedown(function(){
+    timeout = setInterval(function(){
+        window.scrollBy(0,-1); // May need to be -1 to go down
+    }, 0); // Play around with this number. May go too fast
+
+    return false;
+});
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="scientific.css">
+</head>
+<body>
+     <h1 class="centralHeading">Scientific Calculator</h1>
+
+     <div class="outerBox">
+        <div class="output"><span class="out"></span><span class="blink">_</span></div>
+     <div class="container">
+        <div class="box" onclick="binary('+')">+</div>
+        <div class="box" onclick="binary('-')">-</div>
+        <div class="box" onclick="binary('*')">*</div>
+        <div class="box" onclick="binary('(')">(</div>
+        <div class="box" onclick="binary(',')">,</div>
+        <div class="box" onclick="binary(')')">)</div>
+        <div class="box" onclick="xoperations('2')">x<sup>2</sup></div>
+        <div class="box" onclick="DEL()">DEL</div>
+        <div class="box" onclick="insert('1')">1</div>
+        <div class="box" onclick="insert('2')">2</div>
+        <div class="box" onclick="insert('3')">3</div>
+        <div class="box" onclick="dualOperation('sin')">sin</div>
+        <div class="box" onclick="dualOperation('sinh')">sinh</div>
+        <div class="box" onclick="dualOperation('cot')">cot</div>
+        <div class="box" onclick="xoperations('3')">x<sup>3</sup></div>
+        <div class="box" onclick="clearScreen()">C</div>
+        <div class="box" onclick="insert('4')">4</div>
+        <div class="box" onclick="insert('5')">5</div>
+        <div class="box" onclick="insert('6')">6</div>
+        <div class="box" onclick="dualOperation('cos')">cos</div>
+        <div class="box" onclick="dualOperation('cosh')">cosh</div>
+        <div class="box" onclick="dualOperation('sec')">sec</div>
+        <div class="box" onclick="dualOperation('10^')">10<sup>x</sup></div>
+        <div class="box equals" onclick="find()">=</div>
+        <div class="box" onclick="insert('7')">7</div>
+        <div class="box" onclick="insert('8')">8</div>
+        <div class="box" onclick="insert('9')">9</div>
+        <div class="box" onclick="dualOperation('tan')">tan</div>
+        <div class="box" onclick="dualOperation('tanh')">tanh</div>
+        <div class="box" onclick="dualOperation('log')">log</div>
+        <div class="box" onclick="dualOperation('√')">√x</div>
+        <div class="box" onclick="binary('/')">/</div>
+        <div class="box" onclick="insert('0')">0</div>
+        <div class="box" onclick="insert('.')">.</div>
+        <div class="box" onclick="insert(Math.PI)">π</div>
+        <div class="box" onclick="insert(Math.E)">e</div>
+        <div class="box" onclick="dualOperation('ln')">ln</div>
+        <div class="box" onclick="dualOperation('∛')">∛x</div>
+     </div>
+     </div>
+     <script src="scientificCal.js"></script>
+</body>
+</html>

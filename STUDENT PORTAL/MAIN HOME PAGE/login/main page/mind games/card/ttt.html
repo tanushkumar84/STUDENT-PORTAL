@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="board">
+        <div class="cell" id="b1"></div>
+        <div class="cell" id="b2"></div>
+        <div class="cell" id="b3"></div>
+        <div class="cell" id="b4"></div>
+        <div class="cell" id="b5"></div>
+        <div class="cell" id="b6"></div>
+        <div class="cell" id="b7"></div>
+        <div class="cell" id="b8"></div>
+        <div class="cell" id="b9"></div>
+    </div>
+    <button class="restart" onclick="location.reload()">Restart</button>
+    <p class="message"></p>
+</body>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #2f2f2f;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .board {
+    height: 400px;
+    width: 300px;
+    background: #2f2f2f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
+  .cell {
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+  }
+  .cell:nth-child(3n) {
+    border-right: none;
+  }
+  
+  .cell:nth-child(n+7) {
+    border-bottom: none;
+  }
+  
+  .title {
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+  
+  .message {
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+  .restart {
+    all: unset;
+    color: black;
+    background: white;
+    padding: 5px;
+    text-align: center;
+    width: 80px;
+    border-radius: 3px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  .restart::selection {
+    background: white;
+    color: black;
+  }
+      
+</style>
+<script>
+    let cell = document.querySelectorAll(".cell");
+cell = Array.from(cell);
+let wincombo = [
+[0,3,6],
+[6,7,8],
+[3,4,5],
+[0,1,2],
+[2,5,8],
+[1,4,7],
+[2,4,6],
+[0,4,8]
+]
+let player = 'X';
+cell.forEach(function(cells) {
+cells.addEventListener('click', ()=>{
+if(cells.innerHTML.trim() != '') return
+cells.innerHTML = player;
+winner();
+player= player == 'X' ? '0': 'X';
+});
+});
+function winner(){
+wincombo.forEach(function(combo) {
+let check = combo.every(e => cell[e].innerHTML.trim() == player);
+if(check) {
+document.querySelector('.message').innerHTML = player + "is the winner! Restart ?";
+removeAtt();
+}
+});
+}
+function removeAtt(){
+    document.getElementById('b1').style.pointerEvents = 'none';
+    document.getElementById('b2').style.pointerEvents ='none';
+    document.getElementById('b3').style.pointerEvents = 'none'; 
+    document.getElementById('b4').style.pointerEvents ='none';
+    document.getElementById('b5').style.pointerEvents= 'none';
+    document.getElementById('b6').style.pointerEvents='none';
+    document.getElementById('b7').style.pointerEvents ='none';
+    document.getElementById('b8').style.pointerEvents ='none';
+    document.getElementById('b9').style.pointerEvents ='none';
+    }
+</script>
+</html>

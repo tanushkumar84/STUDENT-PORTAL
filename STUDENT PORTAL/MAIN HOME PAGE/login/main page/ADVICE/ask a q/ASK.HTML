@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE> </TITLE>
+<LINK REL="STYLESHEET" TYPE="TEXT/CSS" HREF="ASK.CSS">
+<SCRIPT>
+function func2()
+{
+    window.location.href = "../experts homepage/home.html";
+}
+function func()
+{
+    var a=document.getElementById("question").value;
+    if(a=="")
+    {
+        alert("Please enter a question");
+        return false;
+    }
+    else
+    {
+        alert("Question posted successfully");
+        return true;
+    }
+}
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND="borders.jpg">
+<H1 ALIGN="CENTER"> What's Your Question Today? </H1>
+<P> Tired of searching for answers? Look no further!
+Get solutions from our experts  across the globe.
+Get instant replies for any question.
+</P>
+<FORM METHOD="POST" ACTION="ASKS.PHP">
+<TEXTAREA COLS="50" ROWS="10" NAME="question" ID="question"
+PLACEHOLDER="Enter your question here">
+</TEXTAREA>
+<BR> <BR> 
+<DIV CLASS="sub">
+<INPUT TYPE="BUTTON" VALUE="Go Back" ONCLICK="func2()">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<INPUT TYPE="SUBMIT" VALUE="Submit" ONCLICK="return func();">
+</DIV>
+</FORM>
+</BODY>
+</HTML>

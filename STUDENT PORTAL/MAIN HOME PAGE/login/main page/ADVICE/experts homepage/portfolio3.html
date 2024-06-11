@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #34353b;
+}
+
+header {
+  height: 100vh;
+  padding: 36px 100px;
+ background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.landing {
+  display: flex;
+  height: 90vh;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.landing .intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing .intro h3 {
+  color: #fbfbfb;
+  font-weight: 400;
+  font-size: 32px;
+  margin-left: 10vw;
+}
+
+.landing .intro h3 span {
+  color: #fec86a;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
+.intro button {
+  height: 48px;
+  width: 144px;
+  margin-top: 2.5vh;
+  margin-left: 10vw;
+  background-color: transparent;
+  border: 2px solid #fec86a;
+  border-radius: 8px;
+  color: #fec86a;
+  font-size: 16px;
+  transition: all ease 0.5s;
+}
+
+.intro button:hover {
+  background-color: #fec86a;
+  color: #34353b;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 50vh;
+}
+
+.socials .line {
+  background-color: #fec86a;
+  height: 15vh;
+  width: 2.5px;
+}
+
+.socials i {
+  color: #fbfbfb;
+  font-size: 36px;
+}
+
+.about {
+  height: 45vh;
+  width: 90vw;
+  padding: 80px;
+}
+
+.about h1 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #fbfbfb;
+  padding-left: 20px;
+  font-family: "Libre Baskerville", serif;
+}
+
+.about .description {
+  display: flex;
+  align-items: start;
+}
+
+.about .description .line {
+  height: 2.5px;
+  width: 400px;
+  background-color: #fec86a;
+  margin-right: 32px;
+}
+
+.about .description p {
+  color: #fbfbfb;
+  font-size: 20px;
+}
+
+.about .description p span {
+  color: #fec86a;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+}
+
+.portfolio h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fbfbfb;
+  font-family: "Libre Baskerville", serif;
+}
+
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 50px;
+  gap: 2.5vh;
+}
+
+.portfolio-card {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  background-color: #3d3e42;
+  border-radius: 20px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  transition: all ease 0.5s;
+}
+.experience {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  width: 100vw;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.darker-div {
+  background-color: #34353a;
+  width: 100vw;
+  height: 10vh;
+}
+
+.experience h1 {
+  position: absolute;
+  color: #fbfbfb;
+  font-size: 45px;
+  padding-left: 20px;
+  font-family: "Libre Baskerville", serif;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 15%;
+}
+
+.lighter-div {
+  background-color: #3d3e42;
+  width: 100vw;
+  /* height: 90vh; */
+  padding: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.lighter-div .exp {
+  height: 30vh;
+  width: 50vw;
+  position: relative;
+  margin-left: 20vh;
+}
+
+.exp h2 {
+  color: #fbfbfb;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.exp h2::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  color: #fec86a;
+  background-color: #fec86a;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 7.5%;
+  left: -5%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 5px #fec86a;
+}
+
+.exp-desc::before {
+  content: "";
+  height: 190px;
+  width: 2.5px;
+  background-color: #fbfbfb;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 55%;
+  left: -5%;
+}
+.exp-desc h3 {
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.exp-desc p {
+  color: #fbfbfb;
+  font-size: 16;
+  font-weight: 400;
+}
+
+.contact-me {
+  width: 100vw;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-me h1 {
+  font-size: 56px;
+  color: #fbfbfb;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+}
+
+.contact {
+  display: flex;
+  gap: 24px;
+}
+
+.contact-card {
+  background-color: #fec86a;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  margin-top: 7.5vh;
+}
+</style>
+<body>
+    <header>
+
+        <div class="landing">
+            <div class="intro">
+                <h3><Span>  JAGJEEVAN GUPTA</Span><br>Expert in<br>Career Developement</h3>
+                
+                    <button>Contact Me</button>
+                
+              
+            </div>
+            
+                <div class = "img">
+                    <img src = "expert3remove.png"">
+                </div>
+                <div class="socials">
+                <div class="line"></div>
+                <i class="ri-facebook-circle-fill"></i>
+                <i class="ri-twitter-fill"></i>
+                <i class="ri-linkedin-fill"></i>
+                <i class="ri-whatsapp-line"></i>
+            </div>
+        </div>
+    </header>
+    <section class="about">
+        <h1>About Me</h1>
+        <div class="description">
+            <div class="line"></div>
+            <p>
+              Mentoring and guiding today's students to become tomorrow’s successful professionals -
+               Associate Director & Employer Relations, Career and Professional Development <br> <br>
+               Talks about #initernships, #interviewing, #careerdevelopment, #stetsonuniversity, and #stets on career and professional development
+<br>
+      Hocking College <br>
+      North Deland, Florida, United States  
+            </p>
+        </div>
+
+
+    <section class="experience">
+        <div class="darker-div"></div>
+        <br><br>
+        <h1>Experience</h1>
+        <div class="lighter-div">
+            <div class="exp">
+                <h2>Mind development</h2>
+                <br><br>
+                <div class="exp-desc">
+                    
+                    <p> I continually strive to bridge the gap between higher education and the corporate world through teaching effective use of Career Development processes
+                      and providing viable, proactive resources: “By doing so I assist my students in preparing for their continued achievement and growth within a successful,
+                       enjoyable and prosperous career.</p>
+                </div>
+            </div>
+            <div class="exp">
+                <h2>Speciality Areas:</h2>
+                <div class="exp-desc">
+                    <br><br>
+                    <p> student guidance, time management, career development, motivation, public speaking, processes refinement, student success, budgeting, business management, advising, internships, inventory management, materials management, mentoring, Microsoft Office, press releases, publicity, real estate, scheduling,
+                       marketing, transportation, student development, recruitment specialist, interview preparation, event management, project management, interpersonal relationships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-me" id="contact-loc">
+        <h1>Contact Me</h1>
+        <div class="contact" >
+            <div class="contact-card">
+                <i class="ri-message-3-line"></i>
+                <p>work.devalphaspace.com</p>
+            </div>
+            <div class="contact-card">
+                <i class="ri-phone-line"></i>
+                <p>0123456789</p>
+            </div>
+            <div class="contact-card">
+                <i class="ri-map-pin-3-line"></i>
+                <p>Tripura, India</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+<script>
+    $('.portfolio-button').mousedown(function(){
+    timeout = setInterval(function(){
+        window.scrollBy(0,-1); // May need to be -1 to go down
+    }, 0); // Play around with this number. May go too fast
+
+    return false;
+});
+</script>
+</html>

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;600&family=Sacramento&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: url(./moon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.9);
+}
+html{
+    font-size: 62.5%;
+  }  
+
+.box{
+    /* text-align: center;
+    font-size: 2rem;
+    height: 5rem;
+    border: 0.35rem solid black;
+    color: black; */
+    text-align: center;
+    font-size: 2rem;
+    height: 5rem;
+    border: 0.35rem solid black;
+    color: black;
+    width: 90%;
+    margin-bottom: 0.5rem;
+    line-height: 5rem;
+    font-weight: bold;
+    background-color: rgb(151, 154, 156);
+}
+
+.box:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    padding: 6rem;
+    padding-top: 0;
+}    
+
+.centralHeading{
+    font-family: 'Sacramento', cursive;
+    color: white;
+    text-align: center;
+    font-size: 10rem;
+}
+
+.outerBox{
+       width: 70vw;
+    height: 60vh;
+    background-color: rgb(151 154 156);
+    margin: 8rem auto;
+    border-radius: 1rem;
+    /* filter: brightness(0.7); */
+    padding-top: 1rem;
+}
+    
+.output{
+    width: 62vw;
+    margin: auto;
+    filter: brightness(1.0);
+    /* background-color: #b8b3f5; */
+    background-color: white;
+    height: 5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.blink{
+    display: inline-block;
+    height: 5rem;
+    line-height: 6.4rem;
+    font-size: 4.5rem;
+    font-weight: normal;
+
+}
+
+.equals{
+    grid-row: span 3;
+    height: 17.2rem;
+    font-size: 5rem;
+    line-height: 17rem;
+    font-weight: normal;
+}
+.out{
+    display: inline-block;
+    height: 5rem;
+    line-height: 6.4rem;
+    font-size: 3rem;
+    font-weight: normal;
+}
